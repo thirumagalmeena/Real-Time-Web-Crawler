@@ -31,41 +31,41 @@ A system-level C++ project that crawls web pages in real-time, extracts keywords
 
 Install `libcurl` if not already:
 
-\`\`\`bash
+```bash
 sudo apt update
 sudo apt install libcurl4-openssl-dev
-\`\`\`
+```
 
 ### Build the project
 
-\`\`\`bash
+```bash
 g++ -std=c++17 -Iinclude src/*.cpp -lcurl -o crawler
-\`\`\`
+```
 
 ### Run the crawler
 
-\`\`\`bash
+```bash
 ./crawler
-\`\`\`
+```
 
 ---
 
 ## CLI Menu
 
-\`\`\`bash
+```bash
 1. crawl <url> <max_pages>    # Crawl and index pages
 2. search <keyword>           # Search for a word across pages
 3. print                      # View all indexed keywords and URLs
 4. exit                       # Quit the program
 5. save <filename>            # Save current index to file
 6. load <filename>            # Load index from file
-\`\`\`
+```
 
 ---
 
 ## Example Session
 
-\`\`\`bash
+```bash
 > crawl https://example.com 3
 Crawling: https://example.com
 Crawling: https://www.iana.org/domains/example
@@ -89,6 +89,7 @@ Index loaded from 'index.txt'
 'example' found in:
  - https://example.com (x1)
  - https://www.iana.org/domains/example (x1)
+```
 
 # License
 - This project is licensed for educational purposes only.
